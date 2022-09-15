@@ -4,7 +4,5 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
-  resources :listings
-  get "/api/listings" => "pages#api_listings_index"
-  get "/api/listings/:id" => "pages#api_listings_show"
+  resources :listings, only: [:index, :show, :create, :update, :destroy]
 end
