@@ -4,6 +4,15 @@
 @import "form_legend_clear";
 @import "navbar";
 
+body{
+  color: $brown;
+}
+
+a{
+  text-decoration: none;
+  color: brown;
+}
+
 .bg-pink{
   background-color: $light-pink;
 }
