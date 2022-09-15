@@ -5,6 +5,15 @@
 @import "navbar";
 @import "buttons";
 
+body{
+  color: $brown;
+}
+
+a{
+  text-decoration: none;
+  color: brown;
+}
+
 .bg-pink{
   background-color: $light-pink;
 }
