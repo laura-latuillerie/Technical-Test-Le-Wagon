@@ -22,6 +22,16 @@ We negotiated the prices with our cleaning partner:
 - a checkout checkin costs 10€ per room
 - a last checkout costs 5€ per room
 
+#Get Started
+
+The following templates have been made for Rails 7. If you use Rails 6, please refer to the no-update branch templates
+```
+rails new \
+  -d postgresql \
+  -j webpack \
+  -m https://raw.githubusercontent.com/lewagon/rails-templates/master/minimal.rb \
+  CHANGE_THIS_TO_YOUR_RAILS_APP_NAME```
+```
 Here is the content you have to copy on your file `seed.rb` located in `./db/seeds.rb` 
 ```
 Booking.delete_all
