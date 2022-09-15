@@ -84,6 +84,19 @@ rails new \
 
 
 ## Tables
+Generate all the models
+```
+rails g model listing num_rooms:integer
+rails g model booking start_date:date end_date:date listing:references
+rails g model reservation start_date:date end_date:date listing:references
+rails g model mission mission_type date:date price:integer listing:references
+```
+Don't forget to add those lines to the listing model
+```
+  has_many :bookings, dependent: :destroy
+  has_many :reservations, dependent: :destroy
+  has_many :missions, dependent: :destroy
+```
 
 ## Seeds
 Here is the content you have to copy on your file `seed.rb` located in `./db/seeds.rb` 
