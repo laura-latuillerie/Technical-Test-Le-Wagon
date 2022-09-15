@@ -51,14 +51,41 @@ Go slowly, and write code that could be easily extensible and clean.
 
 # Get Started
 
-The following templates have been made for Rails 7. If you use Rails 6, please refer to the no-update branch templates
+## Configuration
+For the following exercise, versions of my stack :
+```
+yarn -v
+```
+v1.22.15
+```
+node -v
+```
+v16.15.1
+```
+rails -v
+```
+Rails 7.0.4
+```
+ruby -v
+```
+ruby 3.1.2p20 (2022-04-12 revision 4491bb740a) [x86_64-linux]
+
+## Boilerplate
+The following templates have been made for Rails 7. If you use Rails 6, please refer to the no-update branch templates.
 ```
 rails new \
   -d postgresql \
   -j webpack \
   -m https://raw.githubusercontent.com/lewagon/rails-templates/master/minimal.rb \
   CHANGE_THIS_TO_YOUR_RAILS_APP_NAME```
+  cd YOUR_APP_NAME
+  dev
 ```
+
+
+## Tables
+
+## Seeds
 Here is the content you have to copy on your file `seed.rb` located in `./db/seeds.rb` 
 ```
 Booking.delete_all
