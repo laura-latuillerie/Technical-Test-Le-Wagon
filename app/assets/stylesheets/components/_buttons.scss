@@ -1,0 +1,14 @@
+.btn-pink{
+  background-color: $pink;
+  color:white;
+  font-weight: 500;
+}
+
+.btn-pink:hover{
+  background-color: white;
+  color: $pink;
+}
+
+.btn-light:hover{
+  background-color: white;
+}

@@ -1,0 +1,15 @@
+<div class="container-fluid text-center d-flex justify-content-center align-items-center flex-column vh-100 bg-pink">
+  <img src="https://cdn3d.iconscout.com/3d/premium/thumb/classic-house-5560713-4632489.png" height=200>
+  <h1 class="my-3"><strong>Listing</strong></h1>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-4">
+        <div class="bg-white shadow rounded-4 p-4">
+          <p>ID : <%= @listing.id %></p>
+          <p>Num of Rooms : <%= @listing.num_rooms %></p>
+        </div>
+      </div>
+    </div>
+    <%= link_to "Back", root_path, class:"btn btn-light mt-4" %>
+  </div>
+</div>
