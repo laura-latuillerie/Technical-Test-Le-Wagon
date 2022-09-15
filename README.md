@@ -97,6 +97,10 @@ Don't forget to add those lines to the listing model
   has_many :reservations, dependent: :destroy
   has_many :missions, dependent: :destroy
 ```
+Now we can proceed to migration
+```
+rails db:migrate
+```
 
 ## Seeds
 Here is the content you have to copy on your file `seed.rb` located in `./db/seeds.rb` 
