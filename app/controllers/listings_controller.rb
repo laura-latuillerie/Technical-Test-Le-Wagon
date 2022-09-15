@@ -2,12 +2,12 @@ class ListingsController < ApplicationController
 
   def index
     @listings = Listing.all
-    render json: @listings
+    render json: @listings.to_json(methods: [:bookings_count, :reservations_count])
   end
   
   def show
     @listing = Listing.find_by_id(params[:id])
-    render json: @listing
+    render json: @listing.to_json(methods: [:bookings_count, :reservations_count])
   end
 
   def create
