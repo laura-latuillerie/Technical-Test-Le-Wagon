@@ -22,7 +22,34 @@ We negotiated the prices with our cleaning partner:
 - a checkout checkin costs 10€ per room
 - a last checkout costs 5€ per room
 
-#Get Started
+## Goal
+
+You need to create a Rails Application using Active records which has:
+ - JSON API:
+   - CRUD (INDEX/ SH0W/ CREATE/ UPDATE / DELETE ) on `listing`
+   - Index endpoint to revrieve missions created
+
+Note: no authentication is required
+
+The output of the index endpoint to revrieve missions created should resemble this after launching the seed
+```
+{
+  "missions": [
+    {:listing_id=>1, :mission_type=>"first_checkin", :date=>"2016-10-10", :price=>20},
+    {:listing_id=>1, :mission_type=>"last_checkout", :date=>"2016-10-15", :price=>10},
+    {:listing_id=>1, :mission_type=>"first_checkin", :date=>"2016-10-16", :price=>20},
+    {:listing_id=>1, :mission_type=>"last_checkout", :date=>"2016-10-20", :price=>10},
+    {:listing_id=>1, :mission_type=>"checkout_checkin", :date=>"2016-10-13", :price=>20},
+    {:listing_id=>2, :mission_type=>"first_checkin", :date=>"2016-10-15", :price=>10},
+    {:listing_id=>2, :mission_type=>"last_checkout", :date=>"2016-10-20", :price=>5},
+    {:listing_id=>2, :mission_type=>"checkout_checkin", :date=>"2016-10-18", :price=>10}
+  ]
+}
+```
+Go slowly, and write code that could be easily extensible and clean.
+
+
+# Get Started
 
 The following templates have been made for Rails 7. If you use Rails 6, please refer to the no-update branch templates
 ```
@@ -53,28 +80,3 @@ Reservation.create!(listing_id: Listing.first.id, start_date: "2016-10-16".to_da
 Reservation.create!(listing_id: Listing.second.id, start_date: "2016-10-15".to_date, end_date: "2016-10-18".to_date)
 ```
 
-## Goal
-
-You need to create a Rails Application using Active records which has:
- - JSON API:
-   - CRUD (INDEX/ SH0W/ CREATE/ UPDATE / DELETE ) on `listing`
-   - Index endpoint to revrieve missions created
-
-Note: no authentication is required
-
-The output of the index endpoint to revrieve missions created should resemble this after launching the seed
-```
-{
-  "missions": [
-    {:listing_id=>1, :mission_type=>"first_checkin", :date=>"2016-10-10", :price=>20},
-    {:listing_id=>1, :mission_type=>"last_checkout", :date=>"2016-10-15", :price=>10},
-    {:listing_id=>1, :mission_type=>"first_checkin", :date=>"2016-10-16", :price=>20},
-    {:listing_id=>1, :mission_type=>"last_checkout", :date=>"2016-10-20", :price=>10},
-    {:listing_id=>1, :mission_type=>"checkout_checkin", :date=>"2016-10-13", :price=>20},
-    {:listing_id=>2, :mission_type=>"first_checkin", :date=>"2016-10-15", :price=>10},
-    {:listing_id=>2, :mission_type=>"last_checkout", :date=>"2016-10-20", :price=>5},
-    {:listing_id=>2, :mission_type=>"checkout_checkin", :date=>"2016-10-18", :price=>10}
-  ]
-}
-```
-Go slowly, and write code that could be easily extensible and clean.
